@@ -5,7 +5,7 @@ steps for Migrating MySQL Aurora(2.09.1) to Aurora Serverless
 To do that,
 * Upgrade the engine type to Aurora 3.0.2(compatible with MySQL 8.0) with the snapshot of the old cluster.
 
-Take a snapshot of the new cluster and restore it with a serverless instance type.
+* Take a snapshot of the new cluster and restore it with a serverless instance type.
 
 Steps:
 
