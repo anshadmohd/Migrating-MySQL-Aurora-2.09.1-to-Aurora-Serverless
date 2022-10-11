@@ -28,11 +28,3 @@ Steps:
 
 > Rollback after failure to upgrade from MySQL 5.7 to 8.0
 When you upgrade a DB instance from MySQL version 5.7 to MySQL version 8.0, the upgrade can fail. In particular, it can fail if the data dictionary contains incompatibilities that weren't captured by the prechecks. In this case, the database fails to start up successfully in the new MySQL 8.0 version. At this point, Amazon RDS rolls back the changes performed for the upgrade. After the rollback, the MySQL DB instance is running MySQL version 5.7. When an upgrade fails and is rolled back, Amazon RDS generates an event with the event ID RDS-EVENT-0188.
-
-# I have faced this issues
-
-> some tables  has Index length 196605 > 767 bytes, which will cause error after upgradation. Consider changing the row_format of the tables to dynamic and restart the upgrade.
-> i sorted Changed the row_format of the tables to dynamic using the below command
-
-  * ALTER TABLE table_name ROW_FORMAT=DYNAMIC;
-> restart the upgrade
